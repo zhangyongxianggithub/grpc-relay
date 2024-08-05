@@ -1,0 +1,12 @@
+AppName = "ic-relay"
+
+[Server]
+ICListen = ":8080"
+DataListen = ":8081"
+EBListen = ":8082"
+
+[Gateway]
+Schema = "http"
+Server = "localhost"
+Port = 8080
+Token = "d757afec-98bb-41ab-855a-8bf72fc7c27b"

@@ -1,0 +1,35 @@
+type: google.api.Service
+config_version: 3
+# protoc --proto_path=./pb \
+# --grpc-gateway_out ./pb \
+#  --grpc-gateway_opt paths=source_relative \
+#  --grpc-gateway_opt grpc_api_configuration=./pb/inference_engine_api.yaml \
+#  --grpc-gateway_opt standalone=true \
+#  inference_engine.proto
+
+
+# protoc --proto_path=./pb \
+#  --openapiv2_out ./pb \
+#  --openapiv2_opt grpc_api_configuration=./pb/inference_engine_api.yaml \
+#  inference_engine.proto
+http:
+  rules:
+    - selector: language_inference.GRPCInferenceService.ModelStreamInfer
+      post: /comate/v1/grpc/ic/grpcinferenceservice/modelstreaminfer
+      body: "*"
+    - selector: language_inference.GRPCInferenceService.ModelFetchRequest
+      post: /comate/v1/grpc/ic/grpcinferenceservice/modelfetchrequest
+      body: "*"
+    - selector: language_inference.GRPCInferenceService.ModelSendResponse
+      post: /comate/v1/grpc/ic/grpcinferenceservice/modelsendresponse
+      body: "*"
+    # data server
+    - selector: language_inference.GRPCInferenceService.ModelStreamInfer
+      post: /comate/v1/grpc/dataserver/grpcinferenceservice/modelstreaminfer
+      body: "*"
+    - selector: language_inference.GRPCInferenceService.ModelFetchRequest
+      post: /comate/v1/grpc/dataserver/grpcinferenceservice/modelfetchrequest
+      body: "*"
+    - selector: language_inference.GRPCInferenceService.ModelSendResponse
+      post: /comate/v1/grpc/dataserver/grpcinferenceservice/modelsendresponse
+      body: "*"

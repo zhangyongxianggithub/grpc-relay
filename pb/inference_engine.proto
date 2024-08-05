@@ -1,0 +1,90 @@
+syntax = "proto3";
+package language_inference;
+option java_multiple_files = true;
+option java_generic_services = true;
+option go_package = "icode.baidu.com/baidu/comate-pro/ic-gateway/pb;pb";
+// protoc --proto_path=./pb --go_out=./pb --go_opt=paths=source_relative --go-grpc_out=./pb --go-grpc_opt=paths=source_relative inference_engine.proto
+// Inference Server GRPC endpoints.
+service GRPCInferenceService
+{
+  // 模型推理请求入口
+  // 输入一个请求，流式返回多个response
+  rpc ModelStreamInfer(ModelInferRequest) returns (stream ModelInferResponse) {}
+
+  // 拉取一个请求，给inference server调用
+  rpc ModelFetchRequest(ModelFetchRequestParams) returns (ModelFetchRequestResult) {}
+
+  // 发送请求的返回结果，给inference server调用
+  // response是流式的发送
+  rpc ModelSendResponse(stream ModelInferResponse) returns (ModelSendResponseResult) {}
+}
+
+// 拉取请求时，需要给出模型参数
+message ModelFetchRequestParams
+{
+  // 模型全局唯一id
+  repeated string model_id = 1;
+
+  // 一次返回的最大请求数
+  int32 max_request_num = 2;
+}
+
+message ModelFetchRequestResult
+{
+  // 获取到的请求数组
+  repeated ModelInferRequest requests = 1;
+}
+
+// 无需关心SendResponse的返回值
+message ModelSendResponseResult {
+}
+
+enum ContentType {
+  WENXIN = 0;
+  TRITON = 1;
+}
+
+message ModelInferRequest
+{
+  // 模型唯一id，
+  string model_id = 1;
+
+  // 请求唯一id，
+  string request_id = 2;
+
+  // 可用于跟踪同一请求，多次推理的应答，可选
+  string trace_id = 3;
+
+  // 语言模型输入，各模型不同，
+  string input = 4;
+
+  // 租户信息，可选
+  string tenant_id = 5;
+
+  // 输入类型，取值 triton、wenxin，默认值是 wenxin
+  ContentType input_type = 6;
+}
+
+message ModelInferResponse
+{
+  // 请求唯一id
+  string request_id = 1;
+
+  // 返回的句子id，表示第几句，用于去重和排序
+  int32 sentence_id = 2;
+
+  // 语言模型输出
+  string output = 3;
+
+  // 模型唯一id
+  string model_id = 4;
+
+  // 可用于跟踪同一请求，多次推理的应答
+  string trace_id = 5;
+
+  // 租户信息，可选
+  string tenant_id = 6;
+
+  // 输出类型，取值 triton、wenxin，默认值是 wenxin
+  ContentType output_type = 7;
+}

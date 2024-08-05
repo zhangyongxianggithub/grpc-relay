@@ -1,0 +1,99 @@
+AppName = "ic-gateway"
+
+Tokens=[
+    "d757afec-98bb-41ab-855a-8bf72fc7c27b",
+    "4c794f21-8209-46c9-8b13-ff247eeabd21",
+    "1dab742d-4149-4095-981c-ec04d8027b17"
+]
+
+[Server]
+Listen = ":8080"
+Test = false
+
+[[ICServers]]
+Name = "primary"
+Server = "10.209.238.155"
+Port = 8143
+Weight = 1
+
+[[DataServers]]
+Name = "primary"
+Server = "10.209.238.155"
+Port = 8082
+Weight = 1
+
+[ChargeService]
+Server = "10.212.86.90"
+Port = 8586
+
+[EBMapping]
+"/rpc/2!0/ai_custom/v1/wenxinworkshop/chat/completions_pro" = "ERNIE-4!0-8K"
+"/rpc/2!0/ai_custom/v1/wenxinworkshop/chat/ernie-4!0-8k-preview" = "ERNIE-4!0-8K-Preview"
+"/rpc/2!0/ai_custom/v1/wenxinworkshop/chat/completions_adv_pro" = "ERNIE-4!0-8K-Preview-0518"
+"/rpc/2!0/ai_custom/v1/wenxinworkshop/chat/ernie-4!0-8k-latest" = "ERNIE-4!0-8K-Latest"
+"/rpc/2!0/ai_custom/v1/wenxinworkshop/chat/ernie-4!0-8k-0329" = "ERNIE-4!0-8K-0329"
+"/rpc/2!0/ai_custom/v1/wenxinworkshop/chat/ernie-4!0-8k-0613" = "ERNIE-4!0-8K-0613"
+"/rpc/2!0/ai_custom/v1/wenxinworkshop/chat/ernie-4!0-turbo-8k" = "ERNIE-4!0-Turbo-8K"
+"/rpc/2!0/ai_custom/v1/wenxinworkshop/chat/ernie-4!0-turbo-8k-preview" = "ERNIE-4!0-Turbo-8K-Preview"
+"/rpc/2!0/ai_custom/v1/wenxinworkshop/chat/completions" = "ERNIE-3!5-8K"
+"/rpc/2!0/ai_custom/v1/wenxinworkshop/chat/ernie-3!5-8k-preview" = "ERNIE-3!5-8K-Preview"
+"/rpc/2!0/ai_custom/v1/wenxinworkshop/chat/ernie-3!5-8k-0329" = "ERNIE-3!5-8K-0329"
+"/rpc/2!0/ai_custom/v1/wenxinworkshop/chat/ernie-3!5-128k" = "ERNIE-3!5-128K"
+"/rpc/2!0/ai_custom/v1/wenxinworkshop/chat/ernie-3!5-8k-0613" = "ERNIE-3!5-8K-0613"
+"/rpc/2!0/ai_custom/v1/wenxinworkshop/chat/ernie_speed" = "ERNIE-Speed-8K"
+"/rpc/2!0/ai_custom/v1/wenxinworkshop/chat/ernie-speed-128k" = "ERNIE-Speed-128K"
+"/rpc/2!0/ai_custom/v1/wenxinworkshop/chat/eb-instant" = "ERNIE-Lite-8K-0922"
+"/rpc/2!0/ai_custom/v1/wenxinworkshop/chat/ernie-lite-8k" = "ERNIE-Lite-8K"
+"/rpc/2!0/ai_custom/v1/wenxinworkshop/chat/ernie-lite-8k-0725" = "ERNIE-Lite-8K-0725"
+"/rpc/2!0/ai_custom/v1/wenxinworkshop/chat/ernie-lite-4k-0704" = "ERNIE-Lite-4K-0704"
+"/rpc/2!0/ai_custom/v1/wenxinworkshop/chat/ernie-lite-4k-0516" = "ERNIE-Lite-4K-0516"
+"/rpc/2!0/ai_custom/v1/wenxinworkshop/chat/ernie-lite-128k-0419" = "ERNIE-Lite-128K-0419"
+"/rpc/2!0/ai_custom/v1/wenxinworkshop/chat/ernie-tiny-8k" = "ERNIE-Tiny-8K"
+"/rpc/2!0/ai_custom/v1/wenxinworkshop/chat/ernie-char-8k" = "ERNIE-Character-8K"
+"/rpc/2!0/ai_custom/v1/wenxinworkshop/chat/ernie-char-fiction-8k" = "ERNIE-Character-Fiction-8K"
+"/rpc/2!0/ai_custom/v1/wenxinworkshop/chat/ernie-func-8k" = "ERNIE-Functions-8K"
+"/rpc/2!0/ai_custom/v1/wenxinworkshop/chat/ai_apaas" = "ERNIE-Speed-AppBuilder-8K"
+"/rpc/2!0/ai_custom/v1/wenxinworkshop/chat/ai_apaas_lite" = "ERNIE-Lite-AppBuilder-8K-0614"
+"/rpc/2!0/ai_custom/v1/wenxinworkshop/chat/gemma-2b-it" = "Gemma-2B-it"
+"/rpc/2!0/ai_custom/v1/wenxinworkshop/chat/gemma_7b_it" = "Gemma-7B-it"
+"/rpc/2!0/ai_custom/v1/wenxinworkshop/chat/yi_34b_chat" = "Yi-34B-Chat"
+"/rpc/2!0/ai_custom/v1/wenxinworkshop/chat/mixtral_8x7b_instruct" = "Mixtral-8x7B-Instruct"
+"/rpc/2!0/ai_custom/v1/wenxinworkshop/chat/mistral_7b_instruct" = "Mistral-7B-Instruct"
+"/rpc/2!0/ai_custom/v1/wenxinworkshop/chat/llama_2_7b" = "Llama-2-7b-chat"
+"/rpc/2!0/ai_custom/v1/wenxinworkshop/chat/linly_chinese_lla_ma_2_7b" = "Linly-Chinese-LLaMA-2-7B"
+"/rpc/2!0/ai_custom/v1/wenxinworkshop/chat/qianfan_chinese_llama_2_7b" = "Qianfan-Chinese-Llama-2-7B"
+"/rpc/2!0/ai_custom/v1/wenxinworkshop/chat/qianfan_chinese_llama_2_7b_32k" = "Qianfan-Chinese-Llama-2-7B-32K"
+"/rpc/2!0/ai_custom/v1/wenxinworkshop/chat/llama_2_13b" = "Llama-2-13b-chat"
+"/rpc/2!0/ai_custom/v1/wenxinworkshop/chat/linly_chinese_lla_ma_2_13b" = "Linly-Chinese-LLaMA-2-13B"
+"/rpc/2!0/ai_custom/v1/wenxinworkshop/chat/qianfan_chinese_llama_2_13b" = "Qianfan-Chinese-Llama-2-13B-v1"
+"/rpc/2!0/ai_custom/v1/wenxinworkshop/chat/qianfan_chinese_llama_2_13b_v2" = "Qianfan-Chinese-Llama-2-13B-v2"
+"/rpc/2!0/ai_custom/v1/wenxinworkshop/chat/llama_2_70b" = "Llama-2-70b-chat"
+"/rpc/2!0/ai_custom/v1/wenxinworkshop/chat/qianfan_llama_2_70b_compressed" = "Qianfan-Llama-2-70B-compressed"
+"/rpc/2!0/ai_custom/v1/wenxinworkshop/chat/qianfan_chinese_llama_2_70b" = "Qianfan-Chinese-Llama-2-70B"
+"/rpc/2!0/ai_custom/v1/wenxinworkshop/chat/qianfan_chinese_llama_2_1!3b" = "Qianfan-Chinese-Llama-2-1!3B"
+"/rpc/2!0/ai_custom/v1/wenxinworkshop/chat/llama_3_8b" = "Meta-Llama-3-8B-Instruct"
+"/rpc/2!0/ai_custom/v1/wenxinworkshop/chat/llama_3_70b" = "Meta-Llama-3-70B-Instruct"
+"/rpc/2!0/ai_custom/v1/wenxinworkshop/chat/chat_glm3_6b" = "ChatGLM3-6B"
+"/rpc/2!0/ai_custom/v1/wenxinworkshop/chat/chatglm3_6b_32k" = "chatglm3-6b-32k"
+"/rpc/2!0/ai_custom/v1/wenxinworkshop/chat/chatglm2_6b_32k" = "ChatGLM2-6B-32K"
+"/rpc/2!0/ai_custom/v1/wenxinworkshop/chat/chat_glm2_6b_int4" = "ChatGLM2-6B-INT4"
+"/rpc/2!0/ai_custom/v1/wenxinworkshop/chat/chat_glm2_6b" = "ChatGLM2-6B"
+"/rpc/2!0/ai_custom/v1/wenxinworkshop/chat/baichuan2_7b_chat" = "Baichuan2-7B-Chat"
+"/rpc/2!0/ai_custom/v1/wenxinworkshop/chat/baichuan2_13b_chat" = "Baichuan2-13B-Chat"
+"/rpc/2!0/ai_custom/v1/wenxinworkshop/chat/xverse_13b_chat" = "XVERSE-13B-Chat"
+"/rpc/2!0/ai_custom/v1/wenxinworkshop/chat/xuanyuan_70b_chat" = "XuanYuan-70B-Chat-4bit"
+"/rpc/2!0/ai_custom/v1/wenxinworkshop/chat/disc_med_llm" = "DISC-MedLLM"
+"/rpc/2!0/ai_custom/v1/wenxinworkshop/chat/chatlaw" = "ChatLaw"
+"/rpc/2!0/ai_custom/v1/wenxinworkshop/chat/falcon_7b" = "Falcon-7B"
+"/rpc/2!0/ai_custom/v1/wenxinworkshop/chat/falcon_40b_instruct" = "Falcon-40B-Instruct"
+"/rpc/2!0/ai_custom/v1/wenxinworkshop/chat/aquilachat_7b" = "AquilaChat-7B"
+"/rpc/2!0/ai_custom/v1/wenxinworkshop/chat/rwkv_4_world" = "RWKV-4-World"
+"/rpc/2!0/ai_custom/v1/wenxinworkshop/chat/bloomz_7b1" = "BLOOMZ-7B"
+"/rpc/2!0/ai_custom/v1/wenxinworkshop/chat/qianfan_bloomz_7b_compressed" = "Qianfan-BLOOMZ-7B-compressed"
+"/rpc/2!0/ai_custom/v1/wenxinworkshop/chat/rwkv_4_pile_14b" = "RWKV-4-pile-14B"
+"/rpc/2!0/ai_custom/v1/wenxinworkshop/chat/rwkv_raven_14b" = "RWKV-Raven-14B"
+"/rpc/2!0/ai_custom/v1/wenxinworkshop/chat/open_lla_ma_7b" = "OpenLLaMA-7B"
+"/rpc/2!0/ai_custom/v1/wenxinworkshop/chat/dolly_12b" = "Dolly-12B"
+"/rpc/2!0/ai_custom/v1/wenxinworkshop/chat/mpt_7b_instruct" = "MPT-7B-Instruct"
+"/rpc/2!0/ai_custom/v1/wenxinworkshop/chat/mpt_30b_instruct" = "MPT-30B-instruct"
+"/rpc/2!0/ai_custom/v1/wenxinworkshop/chat/oa_pythia_12b_sft_4" = "OA-Pythia-12B-SFT-4"

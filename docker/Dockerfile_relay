@@ -1,0 +1,6 @@
+FROM iregistry.baidu-int.com/comate/alpine:3.20
+WORKDIR /workspace
+COPY /output/relay /workspace
+COPY /output/relay.toml /workspace/config.toml
+RUN mkdir -p /workspace/log
+CMD ["./relay"]
