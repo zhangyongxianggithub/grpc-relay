@@ -1,4 +1,4 @@
-module bestzyx.com/grpc-relay/pb
+module github.com/zhangyongxianggithub/grpc-relay/pb
 
 go 1.22
 

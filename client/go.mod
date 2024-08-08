@@ -1,4 +1,4 @@
-module bestzyx.com/grpc-relay/client
+module github.com/zhangyongxianggithub/grpc-relay/client
 
 go 1.22
 

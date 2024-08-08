@@ -1,4 +1,4 @@
-module bestzyx.com/grpc-relay/gateway
+module github.com/zhangyongxianggithub/grpc-relay/gateway
 
 go 1.22
 
