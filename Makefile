@@ -17,7 +17,7 @@ APP_VERSION	:= 1.0.0
 GIT_BRANCH 	:= $(shell git rev-parse --abbrev-ref HEAD)
 GIT_COMMIT 	:= $(shell git rev-parse HEAD)
 BUILD_DATE	:= $(shell date "+%Y-%m-%d %H:%M:%S")
-VERSION_VAR := bestzyx.com/grpc-relay/version
+VERSION_VAR := github.com/zhangyongxianggithub/grpc-relay/version
 GOMODULE 	:= $(shell $(GO) list -m)
 
 LD_FLAGS 	:= " -extldflags=-static \
@@ -34,8 +34,8 @@ LD_FLAGS 	:= " -extldflags=-static \
 all: clean prepare compile package
 
 prepare:
-	git version     # 低于 2.17.1 可能不能正常工作
-	go env          # 打印出 go 环境信息，可用于排查问题
+	git version
+	go env
 	go mod download || go mod download -x  # 下载 依赖
 
 #make compile

@@ -4,8 +4,8 @@ import (
 	"encoding/json"
 	"strings"
 
-	"bestzyx.com/grpc-relay/gateway/internal/charge"
-	"bestzyx.com/grpc-relay/gateway/internal/mux"
+	"github.com/zhangyongxianggithub/grpc-relay/gateway/internal/charge"
+	"github.com/zhangyongxianggithub/grpc-relay/gateway/internal/mux"
 )
 
 type MsiConversation struct {

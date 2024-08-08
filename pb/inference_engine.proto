@@ -2,7 +2,7 @@ syntax = "proto3";
 package language_inference;
 option java_multiple_files = true;
 option java_generic_services = true;
-option go_package = "icode.baidu.com/baidu/comate-pro/ic-gateway/pb;pb";
+option go_package = "github.com/zhangyongxianggithub/grpc-relay/pb;pb";
 // protoc --proto_path=./pb --go_out=./pb --go_opt=paths=source_relative --go-grpc_out=./pb --go-grpc_opt=paths=source_relative inference_engine.proto
 // Inference Server GRPC endpoints.
 service GRPCInferenceService

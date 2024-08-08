@@ -11,10 +11,10 @@ import (
 	"net/http"
 	"time"
 
-	"bestzyx.com/grpc-relay/pb"
-	"bestzyx.com/grpc-relay/relay/config"
 	"github.com/grpc-ecosystem/grpc-gateway/v2/runtime"
 	"github.com/tmaxmax/go-sse"
+	"github.com/zhangyongxianggithub/grpc-relay/pb"
+	"github.com/zhangyongxianggithub/grpc-relay/relay/config"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 )

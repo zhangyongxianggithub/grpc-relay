@@ -5,10 +5,10 @@ import (
 	"net/http"
 	"strings"
 
-	"bestzyx.com/grpc-relay/gateway/config"
-	"bestzyx.com/grpc-relay/gateway/internal/charge"
-	"bestzyx.com/grpc-relay/gateway/internal/mux"
 	"github.com/google/uuid"
+	"github.com/zhangyongxianggithub/grpc-relay/gateway/config"
+	"github.com/zhangyongxianggithub/grpc-relay/gateway/internal/charge"
+	"github.com/zhangyongxianggithub/grpc-relay/gateway/internal/mux"
 )
 
 type ServiceProxy struct {

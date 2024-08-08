@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"log/slog"
 
-	"bestzyx.com/grpc-relay/pb"
+	"github.com/zhangyongxianggithub/grpc-relay/pb"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
 )

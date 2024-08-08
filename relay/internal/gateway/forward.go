@@ -10,8 +10,8 @@ import (
 	"strings"
 	"time"
 
-	"bestzyx.com/grpc-relay/relay/config"
 	"github.com/google/uuid"
+	"github.com/zhangyongxianggithub/grpc-relay/relay/config"
 	"golang.org/x/xerrors"
 )
 

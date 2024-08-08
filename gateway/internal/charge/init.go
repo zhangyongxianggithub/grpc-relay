@@ -4,8 +4,8 @@ import (
 	"log/slog"
 	"net/http"
 
-	"bestzyx.com/grpc-relay/gateway/config"
-	"bestzyx.com/grpc-relay/gateway/internal/mux"
+	"github.com/zhangyongxianggithub/grpc-relay/gateway/config"
+	"github.com/zhangyongxianggithub/grpc-relay/gateway/internal/mux"
 )
 
 type Service struct {

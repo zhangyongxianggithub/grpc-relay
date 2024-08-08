@@ -8,6 +8,8 @@ require (
 	github.com/grpc-ecosystem/grpc-gateway/v2 v2.20.0
 	github.com/spf13/viper v1.19.0
 	github.com/tmaxmax/go-sse v0.8.0
+	github.com/zhangyongxianggithub/grpc-relay/log v0.0.0-20240808113515-e36ff8011bc9
+	github.com/zhangyongxianggithub/grpc-relay/pb v0.0.0-20240808113515-e36ff8011bc9
 	golang.org/x/xerrors v0.0.0-20220907171357-04be3eba64a2
 	google.golang.org/grpc v1.65.0
 	google.golang.org/protobuf v1.34.2
@@ -15,6 +17,7 @@ require (
 
 require (
 	github.com/hashicorp/hcl v1.0.0 // indirect
+	github.com/lmittmann/tint v1.0.5 // indirect
 	github.com/magiconair/properties v1.8.7 // indirect
 	github.com/mitchellh/mapstructure v1.5.0 // indirect
 	github.com/pelletier/go-toml/v2 v2.2.2 // indirect

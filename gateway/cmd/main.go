@@ -4,12 +4,12 @@ import (
 	"log/slog"
 	"net/http"
 
-	"bestzyx.com/grpc-relay/gateway/config"
-	_ "bestzyx.com/grpc-relay/gateway/internal/charge"
-	_ "bestzyx.com/grpc-relay/gateway/internal/eb"
-	_ "bestzyx.com/grpc-relay/gateway/internal/ic"
-	"bestzyx.com/grpc-relay/gateway/internal/mux"
-	_ "bestzyx.com/grpc-relay/log"
+	"github.com/zhangyongxianggithub/grpc-relay/gateway/config"
+	_ "github.com/zhangyongxianggithub/grpc-relay/gateway/internal/charge"
+	_ "github.com/zhangyongxianggithub/grpc-relay/gateway/internal/eb"
+	_ "github.com/zhangyongxianggithub/grpc-relay/gateway/internal/ic"
+	"github.com/zhangyongxianggithub/grpc-relay/gateway/internal/mux"
+	_ "github.com/zhangyongxianggithub/grpc-relay/log"
 	"golang.org/x/xerrors"
 )
 

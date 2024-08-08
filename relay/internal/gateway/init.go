@@ -5,10 +5,10 @@ import (
 	"net"
 	"net/http"
 
-	"bestzyx.com/grpc-relay/pb"
-	"bestzyx.com/grpc-relay/relay/config"
 	"github.com/grpc-ecosystem/grpc-gateway/v2/runtime"
 	"github.com/tmaxmax/go-sse"
+	"github.com/zhangyongxianggithub/grpc-relay/pb"
+	"github.com/zhangyongxianggithub/grpc-relay/relay/config"
 	"golang.org/x/xerrors"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"

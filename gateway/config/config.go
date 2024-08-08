@@ -6,9 +6,9 @@ import (
 	"log/slog"
 	"strings"
 
-	"bestzyx.com/grpc-relay/gateway/internal/mux"
 	"github.com/fsnotify/fsnotify"
 	"github.com/spf13/viper"
+	"github.com/zhangyongxianggithub/grpc-relay/gateway/internal/mux"
 )
 
 type Initializer interface {

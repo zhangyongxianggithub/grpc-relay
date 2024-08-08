@@ -3,9 +3,9 @@ package main
 import (
 	"log/slog"
 
-	_ "bestzyx.com/grpc-relay/log"
-	"bestzyx.com/grpc-relay/relay/config"
-	_ "bestzyx.com/grpc-relay/relay/internal/gateway"
+	_ "github.com/zhangyongxianggithub/grpc-relay/log"
+	"github.com/zhangyongxianggithub/grpc-relay/relay/config"
+	_ "github.com/zhangyongxianggithub/grpc-relay/relay/internal/gateway"
 )
 
 func main() {

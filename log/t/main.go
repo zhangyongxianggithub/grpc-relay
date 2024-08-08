@@ -4,7 +4,7 @@ import (
 	"log/slog"
 	"os"
 
-	_ "bestzyx.com/grpc-relay/log"
+	_ "github.com/zhangyongxianggithub/grpc-relay/log"
 )
 
 func main() {

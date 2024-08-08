@@ -10,13 +10,13 @@ import (
 	"net/http"
 	"time"
 
-	"bestzyx.com/grpc-relay/gateway/config"
-	"bestzyx.com/grpc-relay/gateway/internal/auth"
-	"bestzyx.com/grpc-relay/gateway/internal/charge"
-	"bestzyx.com/grpc-relay/gateway/internal/mux"
-	"bestzyx.com/grpc-relay/pb"
 	"github.com/esurdam/go-swagger-ui"
 	"github.com/grpc-ecosystem/grpc-gateway/v2/runtime"
+	"github.com/zhangyongxianggithub/grpc-relay/gateway/config"
+	"github.com/zhangyongxianggithub/grpc-relay/gateway/internal/auth"
+	"github.com/zhangyongxianggithub/grpc-relay/gateway/internal/charge"
+	"github.com/zhangyongxianggithub/grpc-relay/gateway/internal/mux"
+	"github.com/zhangyongxianggithub/grpc-relay/pb"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
 )
