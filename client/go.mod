@@ -3,7 +3,7 @@ module github.com/zhangyongxianggithub/grpc-relay/client
 go 1.22
 
 require (
-	github.com/zhangyongxianggithub/grpc-relay/pb v1.0.0
+	github.com/zhangyongxianggithub/grpc-relay/pb v0.0.0-20240818075828-ffd6be4ddcbc
 	google.golang.org/grpc v1.65.0
 )
 

@@ -8,8 +8,8 @@ require (
 	github.com/grpc-ecosystem/grpc-gateway/v2 v2.22.0
 	github.com/spf13/viper v1.19.0
 	github.com/tmaxmax/go-sse v0.8.0
-	github.com/zhangyongxianggithub/grpc-relay/log v1.0.0
-	github.com/zhangyongxianggithub/grpc-relay/pb v1.0.0
+	github.com/zhangyongxianggithub/grpc-relay/log v0.0.0-20240818075828-ffd6be4ddcbc
+	github.com/zhangyongxianggithub/grpc-relay/pb v0.0.0-20240818075828-ffd6be4ddcbc
 	golang.org/x/xerrors v0.0.0-20240716161551-93cc26a95ae9
 	google.golang.org/grpc v1.65.0
 	google.golang.org/protobuf v1.34.2
