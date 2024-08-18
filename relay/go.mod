@@ -5,7 +5,7 @@ go 1.22
 require (
 	github.com/fsnotify/fsnotify v1.7.0
 	github.com/google/uuid v1.6.0
-	github.com/grpc-ecosystem/grpc-gateway/v2 v2.20.0
+	github.com/grpc-ecosystem/grpc-gateway/v2 v2.22.0
 	github.com/spf13/viper v1.19.0
 	github.com/tmaxmax/go-sse v0.8.0
 	github.com/zhangyongxianggithub/grpc-relay/log v0.0.0-20240808113515-e36ff8011bc9
