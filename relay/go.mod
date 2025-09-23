@@ -1,8 +1,6 @@
 module github.com/zhangyongxianggithub/grpc-relay/relay
 
-go 1.23.0
-
-toolchain go1.24.0
+go 1.25
 
 require (
 	github.com/fsnotify/fsnotify v1.8.0

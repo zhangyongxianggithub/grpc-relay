@@ -1,8 +1,6 @@
 module github.com/zhangyongxianggithub/grpc-relay/gateway
 
-go 1.23.0
-
-toolchain go1.24.0
+go 1.25
 
 require (
 	github.com/esurdam/go-swagger-ui v0.0.0-20221023084847-8beb5ba14803

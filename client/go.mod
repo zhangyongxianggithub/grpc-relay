@@ -1,8 +1,6 @@
 module github.com/zhangyongxianggithub/grpc-relay/client
 
-go 1.23.0
-
-toolchain go1.24.0
+go 1.25
 
 require (
 	github.com/zhangyongxianggithub/grpc-relay/pb v0.0.0-20250206024424-957222f1d408
