@@ -1,6 +1,6 @@
 FROM zyxrepo/alpine:3.20
 WORKDIR /workspace
 COPY /output/gateway /workspace
-COPY /output/gateway.toml /workspace/config.toml
+COPY /output/config/config.toml /workspace/config.toml
 RUN mkdir -p /workspace/log
 CMD ["./gateway"]
